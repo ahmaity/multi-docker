@@ -18,7 +18,7 @@ after_success:
 #login
 - echo "$DOCKER_PASSWORD" | docker login - u "$DOCKER_ID" --password-stdin
 
-#Take images and push them to docker hum
+#Take images and push them to docker hub
   - docker push ahmaity/multi-client
   - docker push ahmaity/multi-ngnix
   - docker push ahmaity/multi-server

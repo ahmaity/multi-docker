@@ -3,7 +3,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t ahmaity/complex-client -f ./client/Dockerfile.dev ./client
+  - docker build -f ./client/Dockerfile.dev ./client
 
 script: 
   - docker run -t ahmaity/complex-client npm test -- --coverage

@@ -14,14 +14,9 @@ after_success:
   - docker build -t ahmaity/multi-server ./server
   - docker build -t ahmaity/multi-worker ./worker
 
-#push images to docker hub
-#login
-- echo "$DOCKER_PASSWORD" | docker login - u "$DOCKER_ID" --password-stdin
 
-#Take images and push them to docker hub
+  - echo "$DOCKER_PASSWORD" | docker login - u "$DOCKER_ID" --password-stdin
   - docker push ahmaity/multi-client
   - docker push ahmaity/multi-ngnix
   - docker push ahmaity/multi-server
   - docker push ahmaity/multi-worker
-
-#

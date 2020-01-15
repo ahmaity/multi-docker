@@ -10,7 +10,7 @@ script:
 
 after_success:
   - docker build -t ahmaity/multi-client ./client
-  - docker build -t ahmaity/multi-ngnix ./ngnix
+  - docker build -t ahmaity/multi-ngnix ./nginx
   - docker build -t ahmaity/multi-server ./server
   - docker build -t ahmaity/multi-worker ./worker
 

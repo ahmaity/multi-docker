@@ -9,14 +9,14 @@ script:
   - docker run -t testimage npm test -- --coverage
 
 after_success:
-  - docker build -t multi-client ./client
-  - docker build -t multi-ngnix ./ngnix
-  - docker build -t multi-server ./server
-  - docker build -t multi-worker ./worker
+  - docker build -t ahmaity/multi-client ./client
+  - docker build -t ahmaity/multi-ngnix ./ngnix
+  - docker build -t ahmaity/multi-server ./server
+  - docker build -t ahmaity/multi-worker ./worker
 
 
   - echo "$DOCKER_PASSWORD" | docker login - u "$DOCKER_ID" --password-stdin
-  - docker push multi-client
-  - docker push multi-ngnix
-  - docker push multi-server
-  - docker push multi-worker
+  - docker push ahmaity/multi-client
+  - docker push ahmaity/multi-ngnix
+  - docker push ahmaity/multi-server
+  - docker push ahmaity/multi-worker

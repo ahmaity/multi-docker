@@ -17,6 +17,6 @@ after_success:
 
   - echo "$DOCKER_PASSWORD" | docker login - u "$DOCKER_ID" --password-stdin
   - docker push ahmaity/multi-client
-  - docker push ahmaity/multi-ngnix
+  - docker push ahmaity/multi-nginx
   - docker push ahmaity/multi-server
   - docker push ahmaity/multi-worker

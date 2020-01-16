@@ -20,3 +20,17 @@ after_success:
   - docker push ahmaity/multi-nginx
   - docker push ahmaity/multi-server
   - docker push ahmaity/multi-worker
+
+deploy:
+  edge: true
+  provider: elasticbeanstalk
+  region: "us-east-2"
+  app: "Multi-docker"
+  env: "MultiDocker-env"
+  bucket_name: "elasticbeanstalk-us-east-2-347060438335"
+  bucket_path: "Multi-docker"
+  on:
+      branch: master  
+    access_key_id: $AWS_ACCESS_KEY
+    secret_access_key: 
+      secret: "$AWS_SECRET_KEY"

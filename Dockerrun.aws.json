@@ -23,7 +23,7 @@
 		},
 		{
 			"name": "nginx",
-			"image": "ahmaity/mutli-nginx",
+			"image": "ahmaity/multi-nginx",
 			"hostname": "nginx",
 			"essential": true,
 			"portMappings": [{

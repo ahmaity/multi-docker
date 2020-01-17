@@ -6,8 +6,6 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 
 const app = express();
-//Cross-Origin Resource Sharing. Allows to make requests from one domain
-//to another different domain (e.g., React to pg)
 app.use(cors());
 app.use(bodyParser.json());
 
